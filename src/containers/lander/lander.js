@@ -92,14 +92,14 @@ export default class Lander extends Component {
                 break;
             case 'home':
                 return (
-                    <div className={styles.titleContainer} style={{'WebkitFilter':'drop-shadow(' + this.state.titleShadow + 'px ' + this.state.titleShadow + 'px ' + this.state.titleShadow + 'px ' + '#000000)'}}>
+                    <div className={styles.titleContainer} >
                         <img src="../../../public/images/lander_trevorlinan.png" />
                     </div>
                 );
                 break;
             default:
                 return (
-                    <div className={styles.titleContainer} style={{'WebkitFilter':'drop-shadow(' + this.state.titleShadow + 'px ' + this.state.titleShadow + 'px ' + this.state.titleShadow + 'px ' + '#000000)'}}>
+                    <div className={styles.titleContainer} >
                         <img src="../../../public/images/lander_trevorlinan.png" />
                     </div>
                 );
