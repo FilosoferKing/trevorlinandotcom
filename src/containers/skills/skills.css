@@ -1,0 +1,591 @@
+.skillsContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(39, 30, 18, .55);
+    /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+    -webkit-perspective: 60vw; /* Chrome, Safari, Opera  */
+    perspective: 60vw;
+    perspective-origin: 50% 50%;
+    -webkit-perspective-origin: 50% 50%;
+}
+
+.paperDivs {
+    position: relative;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+}
+
+.paperDivs .circlePaperContainer:nth-child(1) .paper1,
+.paperDivs .circlePaperContainer:nth-child(2) .paper1,
+.paperDivs .circlePaperContainer:nth-child(3) .paper1,
+.paperDivs .circlePaperContainer:nth-child(4) .paper1{
+    animation: rotateSkillSetTitle .5s linear 0s 1 forwards;
+    -webkit-animation: rotateSkillSetTitle .5s linear 0s 1 forwards;
+}
+
+@keyframes rotateSkillSetTitle {
+    0% {
+        transform: rotateZ(-360deg);
+        -webkit-transform: rotateZ(-360deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+.paperDivs .paper1 p {
+    flex: 1;
+    text-align: center;
+    color: #271E12;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+
+.skillsDivs>div:nth-child(1) {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsDivs>div:nth-child(1) img {
+    width: 75%;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.circlePaperContainer {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.paper1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    background-color: #ffffff;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(1) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: 0;
+    animation: skillsSlide1 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide1 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(2) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -200%;
+    animation: skillsSlide2 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide2 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(3) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -400%;
+    animation: skillsSlide3 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide3 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(4) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -600%;
+    animation: skillsSlide4 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide4 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(5) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -800%;
+    animation: skillsSlide5 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide5 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(6) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -1000%;
+    animation: skillsSlide6 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide6 1s linear .99s 1 forwards;
+}
+
+.skillsDivs .circlePaperContainer:nth-child(7) .paper1 {
+    position: relative;
+    opacity: 0;
+    margin-left: -1200%;
+    animation: skillsSlide7 1s linear .99s 1 forwards;
+    -webkit-animation: skillsSlide7 1s linear .99s 1 forwards;
+}
+
+@keyframes skillsSlide1 {
+    0% {
+        opacity: 1;
+        transform: rotate3d(0,-10,0,50deg);
+        -webkit-transform: rotate3d(0,-10,0,50deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide2 {
+    0% {
+        opacity: 1;
+        margin-left: -200%;
+        transform: rotate3d(0,-10,0,100deg);
+        -webkit-transform: rotate3d(0,-10,0,100deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide3 {
+    0% {
+        opacity: 1;
+        margin-left: -400%;
+        transform: rotate3d(0,-10,0,150deg);
+        -webkit-transform: rotate3d(0,-10,0,150deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide4 {
+    0% {
+        opacity: 1;
+        margin-left: -600%;
+        transform: rotate3d(0,-10,0,200deg);
+        -webkit-transform: rotate3d(0,-10,0,200deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide5 {
+    0% {
+        opacity: 1;
+        margin-left: -800%;
+        transform: rotate3d(0,-10,0,250deg);
+        -webkit-transform: rotate3d(0,-10,0,250deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide6 {
+    0% {
+        opacity: 1;
+        margin-left: -1000%;
+        transform: rotate3d(0,-10,0,300deg);
+        -webkit-transform: rotate3d(0,-10,0,300deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+@keyframes skillsSlide7 {
+    0% {
+        opacity: 1;
+        margin-left: -1200%;
+        transform: rotate3d(0,-10,0,360deg);
+        -webkit-transform: rotate3d(0,-10,0,360deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        transform: rotate3d(0,0,0,0deg);
+        -webkit-transform: rotate3d(0,0,0,0deg);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 50% 50%;
+    }
+}
+
+
+.skillsDivs .paper1 p {
+    flex: 1;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+.skillsDivs {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex: 7;
+    flex-direction: column;
+}
+
+.paperDivsHorizontal {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+}
+
+.mobileTitle img {
+    display: none;
+}
+
+.paperDivsHorizontal img {
+    width: 80%;
+}
+
+.paperDivs .circlePaperContainer:before {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 0;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    height: 100%;
+    content: '';
+    border-bottom: 1px solid #ffffff;
+    animation: skillSetLineExpand .33s linear 0s 1 forwards;
+    -webkit-animation: skillSetLineExpand .33s linear 0s 1 forwards;
+}
+
+@keyframes skillSetLineExpand {
+    0% {
+        width: 0;
+        left: 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform-origin: 50% 50%;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+    }
+    100% {
+        width: 50%;
+        left: 25%;
+        transform-origin: 50% 50%;
+        -webkit-transform-origin: 50% 50%;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+    }
+}
+
+.paperDivs>div:nth-child(1):after {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 20%;
+    height: 68%;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    content: '';
+    border-left: 1px solid #ffffff;
+    animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+    -webkit-animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+}
+
+.paperDivs>div:nth-child(2):after {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 20%;
+    height: 48%;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    content: '';
+    border-left: 1px solid #ffffff;
+    animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+    -webkit-animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+}
+
+.paperDivs>div:nth-child(3):after {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 20%;
+    height: 30%;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    content: '';
+    border-left: 1px solid #ffffff;
+    animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+    -webkit-animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+}
+
+.paperDivs>div:nth-child(4):after {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 20%;
+    height: 12%;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    content: '';
+    border-left: 1px solid #ffffff;
+    animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+    -webkit-animation: skillsVerticalLineExpand .33s linear .33s 1 forwards;
+}
+
+@keyframes skillsVerticalLineExpand {
+    0% {
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+    }
+    100% {
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+    }
+}
+
+.paperDivs .circlePaperContainer .pseudoPaperContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.paperDivs>div:nth-child(1) .pseudoPaperContainer:after {
+    position: absolute;
+    top: 118%;
+    left: 75%;
+    width: 20%;
+    height: 88%;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    content: '';
+    border-top: 1px solid #ffffff;
+    animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+    -webkit-animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+}
+
+.paperDivs>div:nth-child(2) .pseudoPaperContainer:after {
+    position: absolute;
+    top: 98%;
+    left: 75%;
+    width: 20%;
+    height: 62%;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    content: '';
+    border-top: 1px solid #ffffff;
+    animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+    -webkit-animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+}
+
+.paperDivs>div:nth-child(3) .pseudoPaperContainer:after {
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    width: 20%;
+    height: 38%;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    content: '';
+    border-top: 1px solid #ffffff;
+    animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+    -webkit-animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+}
+
+.paperDivs>div:nth-child(4) .pseudoPaperContainer:after {
+    position: absolute;
+    top: 62%;
+    left: 75%;
+    width: 20%;
+    height: 12%;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    content: '';
+    border-top: 1px solid #ffffff;
+    animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+    -webkit-animation: skillsHorizontalLineExpand .33s linear .66s 1 forwards;
+}
+
+@keyframes skillsHorizontalLineExpand {
+    0% {
+        transform-origin: 0 100%;
+        -webkit-transform-origin: 0 100%;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+    }
+    100% {
+        transform-origin: 0 100%;
+        -webkit-transform-origin: 0 100%;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+    }
+}
+
+@media only screen
+and (min-device-width : 100px)
+and (max-device-width : 790px)
+and (orientation : portrait) {
+
+    .skillsContainer {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        background-color: rgba(39, 30, 18, .55);
+        /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
+        /*background-size: cover;*/
+        -webkit-perspective: 60vw; /* Chrome, Safari, Opera  */
+        perspective: 60vw;
+        perspective-origin: 50% 50%;
+        -webkit-perspective-origin: 50% 50%;
+    }
+
+    .paperDivs {
+        position: relative;
+        display: flex;
+        flex: 3;
+        flex-direction: row;
+        z-index: 0;
+        margin: 50px auto;
+    }
+
+    .paperDivs .paper1 {
+        height: 25vw;
+    }
+
+    .skillsDivs {
+        position: relative;
+        height: auto;
+        display: flex;
+        flex: 7;
+        flex-direction: row;
+    }
+
+    .skillsDivs .paper1 {
+        height: 25vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paperDivsHorizontal {
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+    }
+
+    .skillsDivs .paperDivsHorizontal:nth-child(1) {
+        display: none;
+    }
+
+    .mobileTitle img {
+        margin-top: 8vh;
+        display: block;
+        width: 80%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+
+    .paperDivsHorizontal img {
+        display: none;
+    }
+
+
+    /*Turn Off Pseudo Divs for Mobile*/
+
+    .paperDivs .circlePaperContainer:before,
+    .paperDivs .circlePaperContainer:after {
+       display: none;
+    }
+
+    .paperDivs .circlePaperContainer .pseudoPaperContainer:before,
+    .paperDivs .circlePaperContainer .pseudoPaperContainer:after {
+        display: none;
+    }
+
+
+}
+

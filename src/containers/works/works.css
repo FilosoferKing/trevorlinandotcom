@@ -1,0 +1,484 @@
+.worksContainer {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+}
+
+.gridLayer1,
+.gridLayer2,
+.gridLayer3,
+.gridLayer4,
+.gridLayer5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.gridTile {
+    position: relative;
+    height: 50vh;
+    width: auto;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.gridImage {
+    position: relative;
+    transform: scaleX(1) scaleY(1);
+    -webkit-transform: scaleX(1) scaleY(1);
+    transition-duration: .25s;
+    -webkit-transition-duration: .25s;
+}
+
+.gridTileButton {
+    opacity: 0;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    cursor: pointer;
+    z-index: 3;
+    animation: pulse 2s linear 0s infinite;
+    -webkit-animation: pulse 2s linear 0s infinite;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) translateX(-50%);
+        transform: scale3d(1, 1, 1) translateX(-50%);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05) translateX(-50%);
+        transform: scale3d(1.05, 1.05, 1.05) translateX(-50%);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1) translateX(-50%);
+        transform: scale3d(1, 1, 1) translateX(-50%);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) translateX(-50%);
+        transform: scale3d(1, 1, 1) translateX(-50%);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05) translateX(-50%);
+        transform: scale3d(1.05, 1.05, 1.05) translateX(-50%);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1) translateX(-50%);
+        transform: scale3d(1, 1, 1) translateX(-50%);
+    }
+}
+
+
+.gridTile:hover .gridTileButton {
+    opacity: 1;
+}
+
+.gridImageWide {
+    width: 100%;
+    height: auto;
+    transform: scaleX(1) scaleY(1);
+    -webkit-transform: scaleX(1) scaleY(1);
+    transition-duration: .25s;
+    -webkit-transition-duration: .25s;
+}
+
+.gridTile:hover .gridImage,
+.gridTile:hover .gridImageWide {
+    opacity: .15;
+    transform: scaleX(1.1) scaleY(1.1);
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+    transition-duration: .25s;
+    -webkit-transition-duration: .25s;
+}
+
+.gridLayer1 .gridTile:nth-child(1),
+.gridLayer5 .gridTile:nth-child(1){
+    flex: 2;
+}
+
+.gridLayer1 .gridTile:nth-child(2),
+.gridLayer5 .gridTile:nth-child(2){
+    flex: 1;
+}
+
+.gridLayer1 .gridTile:nth-child(1) .gridImage,
+.gridLayer5 .gridTile:nth-child(1) .gridImage{
+    height: auto;
+    width: 100%;
+}
+
+.gridLayer1 .gridTile:nth-child(2) .gridImage,
+.gridLayer5 .gridTile:nth-child(2) .gridImage{
+    height: 100%;
+    width: auto;
+}
+
+.gridLayer3 .gridTile:nth-child(1) {
+    flex: 1;
+}
+
+.gridLayer3 .gridTile:nth-child(2) {
+    flex: 2;
+}
+
+.gridLayer3 .gridTile:nth-child(1) .gridImage {
+    height: 100%;
+    width: auto;
+}
+
+.gridLayer3 .gridTile:nth-child(2) .gridImage {
+    height: auto;
+    width: 100%;
+}
+
+.gridLayer1 .gridTile:nth-child(1):hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(65, 203, 163, .75);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer1 .gridTile:nth-child(1):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(65, 203, 163, .75);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer1 .gridTile:nth-child(2):hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(231, 189, 59, .90);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer1 .gridTile:nth-child(2):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(231, 189, 59, .90);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer2 .gridTile:hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer2 .gridTile:hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer3 .gridTile:nth-child(1):hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(231, 189, 59, .9);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer3 .gridTile:nth-child(1):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(231, 189, 59, .90);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer3 .gridTile:nth-child(2):hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer3 .gridTile:nth-child(2):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer4 .gridTile:hover:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(65, 203, 163, .75);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer4 .gridTile:hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(65, 203, 163, .75);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer5 .gridTile:nth-child(1):hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer5 .gridTile:nth-child(1):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(141, 194, 135, .75);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.gridLayer5 .gridTile:nth-child(2):hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(231, 189, 59, .9);
+    text-align: center;
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.gridLayer5 .gridTile:nth-child(2):hover:after  {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    content: attr(data-desc);
+    #background-color: rgba(231, 189, 59, .9);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+@media only screen
+and (min-device-width : 100px)
+and (max-device-width : 790px)
+and (orientation : portrait) {
+
+    .worksContainer {
+        display: flex;
+        flex: 1;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
+        /*background-size: cover;*/
+    }
+
+    .gridLayer1,
+    .gridLayer2,
+    .gridLayer3,
+    .gridLayer4,
+    .gridLayer5 {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .gridLayer1 .gridTile:nth-child(1),
+    .gridLayer5 .gridTile:nth-child(1),
+    .gridLayer1 .gridTile:nth-child(2),
+    .gridLayer5 .gridTile:nth-child(2),
+    .gridLayer3 .gridTile:nth-child(1),
+    .gridLayer3 .gridTile:nth-child(2){
+        flex: 1;
+
+    }
+
+    .gridLayer1 .gridTile:nth-child(1) .gridImage,
+    .gridLayer5 .gridTile:nth-child(1) .gridImage,
+    .gridLayer1 .gridTile:nth-child(2) .gridImage,
+    .gridLayer5 .gridTile:nth-child(2) .gridImage,
+    .gridLayer3 .gridTile:nth-child(1) .gridImage,
+    .gridLayer3 .gridTile:nth-child(2) .gridImage,
+    .gridImageWide {
+        height: 100%;
+        width: auto;
+
+    }
+
+    .gridLayer1 .gridTile:nth-child(1):hover:after,
+    .gridLayer1 .gridTile:nth-child(2):hover:after,
+    .gridLayer2 .gridTile:hover:after,
+    .gridLayer3 .gridTile:nth-child(1):hover:after,
+    .gridLayer3 .gridTile:nth-child(2):hover:after,
+    .gridLayer4 .gridTile:hover:after,
+    .gridLayer5 .gridTile:nth-child(1):hover:after,
+    .gridLayer5 .gridTile:nth-child(2):hover:after  {
+        top: 30%;
+        left: 25%;
+        width: 50%;
+        font-size: 4vw;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,212 @@
+.contactContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(39, 30, 18, .55);
+    /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+}
+
+.contactForm {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDiv {
+    position: relative;
+    width: 33%;
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDiv input,
+.inputDiv textarea {
+    flex: 7;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(231, 189, 59);
+    background-color: transparent;
+    outline: none;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.inputDiv {
+    opacity: 0;
+    animation: fadeIn .5s linear .25s 1 forwards;
+    -webkit-animation: fadeIn .5s linear .25s 1 forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+        -webkit-transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
+
+.contactForm button {
+    opacity: 0;
+    animation: fadeInButton .5s linear .25s 1 forwards;
+    -webkit-animation: fadeInButton .5s linear .25s 1 forwards;
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
+
+.inputDiv textarea {
+    height: 80px;
+    font-size: 1.4em;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(231, 189, 59);
+}
+
+::-moz-placeholder {
+    color: rgb(231, 189, 59);
+}
+
+:-ms-input-placeholder {
+    color: rgb(231, 189, 59);
+}
+
+.inputDiv .labelDiv {
+    position: relative;
+    flex: 1;
+    height: 40px;
+    margin-right: 25px;
+}
+
+.inputDiv .labelDiv label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 1.25em;
+    color: #ffffff;
+    text-align: right;
+}
+
+.contactForm button {
+    height: 40px;
+    width: 120px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.25em;
+    color: #41CBA3;
+    cursor: pointer;
+}
+
+.contactContainer .thankYou {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer .thankYou img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+@media only screen
+and (min-device-width : 100px)
+and (max-device-width : 790px)
+and (orientation : portrait) {
+
+    .inputDiv {
+        position: relative;
+        width: 80vw;
+        display: flex;
+        flex-flow: column ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputDiv input,
+    .inputDiv textarea {
+        flex: 1;
+        width: 80vw;
+        height: 60px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid rgb(231, 189, 59);
+        background-color: transparent;
+        outline: none;
+        font-size: 2vh;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .inputDiv textarea {
+        height: 100px;
+        font-size: 2vh;
+    }
+
+    .inputDiv .labelDiv {
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .inputDiv .labelDiv label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100vw;
+        font-size: 2.5vh;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .contactForm button {
+        height: 80px;
+        width: 50vw;
+        margin-top: 50px;
+        border: none;
+        background-color: transparent;
+        font-size: 2.5vh;
+        font-weight: 500;
+        color: #41CBA3;
+        cursor: pointer;
+    }
+}
