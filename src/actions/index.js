@@ -21,7 +21,7 @@ export function navigationRoute (route) {
 // Local - http://localhost:8080/sendForm
 export function sendForm (formInfo) {
     //console.log('Form Info: ', formInfo);
-    const request = axios.post('https://tldotcom.herokuapp.com/sendForm', formInfo)
+    const request = axios.post('https://trevorlinan.herokuapp.com/sendForm', formInfo)
         .then((success) => {
             console.log('Result: ', success.data);
             return success.data;
