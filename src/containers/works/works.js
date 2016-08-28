@@ -310,7 +310,7 @@ const worksInfo = {
     },
     thetriggerguy: {
         title: 'The Trigger Guy',
-        desc: 'Description of The Trigger Guy. Click to visit the site!',
+        desc: 'The Trigger Guy is a business website providing informational content and displaying available gunsmthing services.',
         link: 'http://www.thetriggerguyusa.com'
     },
     ingenconcepts: {

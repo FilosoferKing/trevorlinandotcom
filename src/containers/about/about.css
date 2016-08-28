@@ -129,6 +129,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: auto;
 }
 
 .aboutContainer .infoDiv p {
@@ -260,15 +261,24 @@ and (orientation : portrait) {
         top: 0;
         right: 0;
         width: 100vw;
-        height: 100vh;
+        height: auto;
         /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
         /*background-size: cover;*/
         -webkit-perspective: 40vw; /* Chrome, Safari, Opera  */
         perspective: 40vw;
+        overflow-y: auto;
     }
 
     .titleDiv {
         margin-top: 15vh;
+    }
+
+    .infoDiv {
+        margin-top: -10vh;
+    }
+
+    .textDiv {
+      margin-top: 10vh
     }
 
     .aboutTitle h3 {
