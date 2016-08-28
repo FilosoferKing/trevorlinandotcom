@@ -29,7 +29,8 @@ export default class Navigation extends Component {
             screenWidth: 0,
             menuType: localStyles.menuItem,
             menuButtonOpenType: localStyles.buttonOpen,
-            menuButtonClosedType: localStyles.buttonClosed
+            menuButtonClosedType: localStyles.buttonClosed,
+            appBar: localStyles.appBarDesktop
         };
 
         // call home on initial site load
@@ -63,7 +64,7 @@ export default class Navigation extends Component {
                     width={this.state.screenWidth}
                     >
                     <AppBar
-                        style={{'primary1Color': 'transparent'}}
+                        style={this.state.appBar}
                         title=""
                         iconElementLeft={<IconButton></IconButton>}
                         iconElementRight={<IconButton></IconButton>}
@@ -124,20 +125,23 @@ export default class Navigation extends Component {
                     this.setState({
                         screenWidth: calculatedWidth,
                         menuType: localStyles.mobileMenuItem,
-                        menuButtonOpenType:localStyles.mobileButtonOpen
+                        menuButtonOpenType: localStyles.mobileButtonOpen,
+                        appBar: localStyles.appBarMobile
                     })
                 } else {
                     this.setState({
                         screenWidth: calculatedWidth,
                         menuType: localStyles.mobileMenuItem,
-                        menuButtonOpenType: localStyles.buttonOpen
+                        menuButtonOpenType: localStyles.buttonOpen,
+                        appBar: localStyles.appBarMobile
                     })
                 }
             } else {
                 this.setState({
                     screenWidth: 256,
                     menuType: localStyles.menuItem,
-                    menuButtonOpenType: localStyles.buttonOpen
+                    menuButtonOpenType: localStyles.buttonOpen,
+                    appBar: localStyles.appBarDesktop
                 })
             }
         }
@@ -153,8 +157,8 @@ const localStyles = {
         'textAlign': 'center'
     },
     mobileMenuItem: {
-        'margin' : '5vh auto',
-        'fontSize': '3vh',
+        'margin' : '10vh auto',
+        'fontSize': '5vh',
         'color': '#ffffff',
         'fontWeight': '400',
         'textAlign': 'center'
@@ -169,6 +173,13 @@ const localStyles = {
     },
     buttonClosed: {
 
+    },
+    appBarDesktop: {
+        'primary1Color': 'transparent'
+    },
+    appBarMobile: {
+        'primary1Color': 'transparent',
+        'height': '120px'
     }
 
 };

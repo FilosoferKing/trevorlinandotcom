@@ -139,6 +139,8 @@
 }
 
 .contactContainer .thankYou img {
+    width: 80vw;
+    height: auto;
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
@@ -208,5 +210,10 @@ and (orientation : portrait) {
         font-weight: 500;
         color: #41CBA3;
         cursor: pointer;
+    }
+
+    .contactContainer .thankYou img {
+        width: 80vw;
+        height: auto;
     }
 }

@@ -161,6 +161,11 @@ and (orientation : portrait) {
         -webkit-filter: invert(100%);
     }
 
+    .social img {
+        width: 120px;
+        height: auto;
+    }
+
 }
 
 

@@ -523,7 +523,8 @@ and (orientation : portrait) {
         flex: 3;
         flex-direction: row;
         z-index: 0;
-        margin: 50px auto;
+        margin-top: 15vh;
+        margin-bottom: 50px;
     }
 
     .paperDivs .paper1 {
@@ -560,13 +561,7 @@ and (orientation : portrait) {
     }
 
     .mobileTitle img {
-        margin-top: 8vh;
-        display: block;
-        width: 80%;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        filter: invert(100%);
-        -webkit-filter: invert(100%);
+        display: none;
     }
 
     .paperDivsHorizontal img {

@@ -142,3 +142,138 @@
     margin: 50px auto;
 }
 
+@media only screen
+and (min-device-width : 100px)
+and (max-device-width : 790px)
+and (orientation : portrait) {
+
+    .menuIcon {
+        width: 90px;
+        height: 120px;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 20px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menuIcon span {
+        display: block;
+        position: absolute;
+        height: 30px;
+        width: 100%;
+        background: #E7BD3B;
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+    .menuIconOpen {
+        width: 90px;
+        height: 75px;
+        position: fixed;
+        margin-left: 108px;
+        margin-top: 20px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        cursor: pointer;
+        z-index: 20000;
+    }
+
+    .menuIconOpen span {
+        display: block;
+        position: absolute;
+        height: 25px;
+        width: 60%;
+        background: #E7BD3B;
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+
+    .menuIcon span:nth-child(1), .menuIcon span:nth-child(2) {
+        top: 0px;
+    }
+
+    .menuIcon span:nth-child(3), .menuIcon span:nth-child(4) {
+        top: 45px;
+    }
+
+    .menuIcon span:nth-child(5), .menuIcon span:nth-child(6) {
+        top: 90px;
+    }
+
+    .menuIconOpen span:nth-child(1),.menuIconOpen span:nth-child(6) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .menuIconOpen span:nth-child(2),.menuIconOpen span:nth-child(5) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .menuIconOpen span:nth-child(1) {
+        left: 5px;
+        top: 7px;
+    }
+
+    .menuIconOpen span:nth-child(2) {
+        left: calc(50% - 5px);
+        top: 7px;
+    }
+
+    .menuIconOpen span:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+    }
+
+    .menuIconOpen span:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+    }
+
+    .menuIconOpen span:nth-child(5) {
+        left: 5px;
+        top: 45px;
+    }
+
+    .menuIconOpen span:nth-child(6) {
+        left: calc(50% - 5px);
+        top: 45px;
+    }
+
+
+}
+
