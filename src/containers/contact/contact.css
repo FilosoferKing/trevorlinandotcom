@@ -131,7 +131,7 @@
 
 .contactContainer .thankYou {
     position: relative;
-    flex: 1;
+    flex: 10;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -139,10 +139,15 @@
 }
 
 .contactContainer .thankYou img {
-    width: 80vw;
+    width: 40vw;
     height: auto;
     filter: invert(100%);
     -webkit-filter: invert(100%);
+}
+
+.contactContainer .thankYou h1 {
+    text-align: center;
+    color: #E7BD3B;
 }
 
 .contactInfoContainer {

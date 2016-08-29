@@ -22,9 +22,15 @@ export function navigationRoute (route) {
 export function sendForm (formInfo) {
     //console.log('Form Info: ', formInfo);
     const request = axios.post('https://trevorlinan.herokuapp.com/sendForm', formInfo)
-        .then((success) => {
-            console.log('Result: ', success.data);
-            return success.data;
+        .then((result) => {
+            console.log('Result: ', result.data);
+            return result.data;
+        }).catch((error) => {
+            console.log('Error: ', error);
+            if (error) {
+                return "uh oh";
+            }
+
         });
     //console.log('Sent Information');
     return {

@@ -159,8 +159,8 @@ export default class ContactForm extends Component {
     };
 
     /**
-     * Display form
-     * @returns form divs
+     * Display form and error messages
+     * @returns form & error divs
      */
     formDisplay = () => {
         const { fields: {name, email, subject, message}, handleSubmit, resetForm} = this.props;
@@ -177,8 +177,25 @@ export default class ContactForm extends Component {
             }, 3000);
             return (
                 <div className={styles.thankYou}>
-                    <img src="../../../public/images/contact_thankyou.png" />
+                    <img src="../../../public/images/contact_thankyou.png"/>
+
                     <div></div>
+                </div>
+            );
+        } else if (this.props.formInfo.result == 'uh oh' && !this.state.reset) {
+            setTimeout(() => {
+                resetForm('contact');
+                this.setState({
+                    nameVal: '',
+                    emailVal: null,
+                    subjectVal: null,
+                    messageVal: null,
+                    reset: true
+                })
+            }, 3000);
+            return (
+                <div className={styles.thankYou}>
+                   <h1>Uh oh! Technical difficulties. <br />My apologies for the inconvenience.</h1>
                 </div>
             );
         } else {
@@ -206,7 +223,7 @@ export default class ContactForm extends Component {
                 <div>trevorlinan@gmail.com</div>
                 <div>714.926.2086</div>
                 <div>
-                    <a href="http://www.trevorlinan.com/resume.pdf" target="_blank">
+                    <a href="http://www.ingenconcepts.com/resume.pdf" target="_blank">
                         Resume <FileDownload />
                     </a>
                 </div>
