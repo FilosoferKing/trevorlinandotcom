@@ -261,9 +261,9 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default reduxForm({ // <----- THIS IS THE IMPORTANT PART!
-    form: 'contact',                           // a unique name for this form
-    fields: ['name', 'email', 'subject', 'message'], // all the fields in your form
+export default reduxForm({
+    form: 'contact',
+    fields: ['name', 'email', 'subject', 'message'],
     validate
 }, mapStateToProps, { sendForm })(ContactForm);
 
