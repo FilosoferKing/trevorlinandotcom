@@ -69,8 +69,8 @@ app.post('/sendForm', function (req, res) {
         port: 465,
         secure: true,
         auth: {
-            user: 'postmaster@sandbox019863230a794dcfa6d04c57b45f29f7.mailgun.org',
-            pass: 'ed775e3806fb10d50007fdc580384043'
+            user: dotenv.MAILGUN_USER,
+            pass: dotenv.MAILGUN_PASS
         }
 
     });

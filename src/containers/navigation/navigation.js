@@ -80,13 +80,13 @@ export default class Navigation extends Component {
                     this.props.navigationRoute('about');
                     this.handleToggle();
                     }} >
-                        About
+                        Intro
                     </MenuItem>
                     <MenuItem style={this.state.menuType} onTouchTap={() => {
                     this.props.navigationRoute('skills');
                     this.handleToggle();
                     }} >
-                        Skills
+                        In The Bag
                     </MenuItem>
                     <MenuItem style={this.state.menuType} onTouchTap={() => {
                     this.props.navigationRoute('works');
