@@ -266,12 +266,12 @@ and (orientation : portrait) {
 
     .menuIconOpen span:nth-child(5) {
         left: 5px;
-        top: 35px;
+        top: 38px;
     }
 
     .menuIconOpen span:nth-child(6) {
         left: calc(50% - 5px);
-        top: 35px;
+        top: 38px;
     }
 
 

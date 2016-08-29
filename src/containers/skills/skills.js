@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+/* CSS Styles for Skills */
 import styles from './skills.css';
+/* Material UI Components */
 import CirclePaper from '../../components/paper';
-import About from '../about/about';
+/* Tooling */
 import _ from 'underscore';
 
 export default class Skills extends Component {
@@ -21,7 +23,7 @@ export default class Skills extends Component {
                 </div>
                 <div className={styles.skillsDivs}>
                     <div className={styles.paperDivsHorizontal}>
-                        {this.props.titleImage}
+                        <img src="../../../public/images/skills_skillstitle.png" />
                     </div>
                     {this.listSkillSets()}
                 </div>
@@ -29,6 +31,10 @@ export default class Skills extends Component {
         );
     }
 
+    /**
+     * Load skill set title divs
+     * @returns {Array}
+     */
     listSkillSetTitles = () => {
         let skillSet = ['Front End', 'Back End', 'Dev Tools', 'Creative'];
         return _.map(skillSet, function(skillSet) {
@@ -41,6 +47,10 @@ export default class Skills extends Component {
         })
     }
 
+    /**
+     * Load skills divs
+     * @returns {Array}
+     */
     listSkillSets = () => {
         let frontEndSkillSet = ['HTML5', 'CSS3', 'JavaScript', 'ReactJS w/ Redux & Webpack', 'jQuery', 'AJAX', 'Bootstrap'];
         let backEndSkillSet = ['Node.js w/ Express', 'MongoDB', 'PHP', 'MySQL',  null,  null,  null];
@@ -83,7 +93,7 @@ const localStyles = {
         skillSetBackgroundColor: '#E7BD3B',
         skillsBackgroundColor: 'rgba(65, 203, 163, .9)'
     }
-}
+};
 
 
 

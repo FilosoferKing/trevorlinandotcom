@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+/* Material UI Components */
 import RaisedButton from 'material-ui/RaisedButton';
-
 
 export default class NavigationItem extends Component {
     constructor (props) {

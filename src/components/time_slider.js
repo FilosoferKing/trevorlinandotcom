@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { slideLight } from '../actions/index';
 import { bindActionCreators } from 'redux';
+/* Redux Actions */
+import { slideLight } from '../actions/index';
+/* Material UI Components */
 import Slider from 'material-ui/Slider';
 import Snackbar from 'material-ui/Snackbar';
+/* Tooling */
 import moment from 'moment';
 
 class TimeSlider extends Component {
@@ -32,7 +35,7 @@ class TimeSlider extends Component {
 
     componentDidMount = () => {
         this.currentTime();
-    }
+    };
 
     render() {
         return (
@@ -60,12 +63,20 @@ class TimeSlider extends Component {
         );
     }
 
+    /**
+     * Provide brightness level to slideLight() Redux action
+     * @param event
+     * @param value
+     */
     lighting = (event, value) => {
         let shadow = (value>90)?5:0;
         this.props.slideLight(value);
         this.handleTouchTap();
-    }
+    };
 
+    /**
+     * Set background brightness dependent on the time of day
+     */
     currentTime = () => {
         let hour = moment().format("H");
         console.log('Current Time: ', hour + ' What the heck!');
@@ -129,22 +140,15 @@ const localStyles = {
     snackbar: {
         'textColor': '#E7BD3B'
     }
-}
+};
 
 const mapStateToProps = (state) => {
-    // Whatever is returned will show up as props
-    // inside of LaunchCustomer
     return {
         lightSlider: state.lightSlider
-
     }
 };
 
-// Anything returned from this function will end up as props
-// on the LaunchCustomer container
 const mapDispatchToProps = (dispatch) => {
-    // Whenever setCustomer is called, the result should be passed
-    // to all of our reducers
     return bindActionCreators({
         slideLight: slideLight
     }, dispatch);

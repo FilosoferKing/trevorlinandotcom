@@ -528,7 +528,9 @@ and (orientation : portrait) {
     }
 
     .paperDivs .paper1 {
-        height: 25vw;
+        height: 23vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 
     .skillsDivs {
@@ -540,10 +542,18 @@ and (orientation : portrait) {
     }
 
     .skillsDivs .paper1 {
-        height: 25vw;
+        height: 23vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-bottom: 1vh;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .skillsDivs .paper1 p {
+        font-size: 2vh;
+        font-weight: 500;
     }
 
     .paperDivsHorizontal {

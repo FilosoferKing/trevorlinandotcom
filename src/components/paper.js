@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+/* Material UI Components */
 import Paper from 'material-ui/Paper';
 
 export default class CirclePaper extends Component {
@@ -17,7 +18,7 @@ export default class CirclePaper extends Component {
 
     componentDidMount = () => {
         this.adjustCircleSize();
-    }
+    };
 
     render() {
         return (
@@ -27,13 +28,20 @@ export default class CirclePaper extends Component {
         );
     }
 
+    /**
+     * Display skill text
+     * @returns skill name
+     */
     text = () => {
         console.log(this.props.paperStyle);
         return (
             <p>{this.props.text}</p>
         );
-    }
+    };
 
+    /**
+     * Create circle by giving paper width same dimension as calculated height
+     */
     adjustCircleSize = () => {
         let node = ReactDOM.findDOMNode(this.refs["circle"]);
         if (node){

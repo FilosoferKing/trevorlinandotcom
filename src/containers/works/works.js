@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+/* CSS Styles for Skills */
 import styles from './works.css';
+/* Material UI Components */
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
+/* Tooling */
 import _ from 'underscore';
-
 
 export default class Works extends Component {
     constructor (props) {
@@ -31,7 +33,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.scienceme.title}
@@ -48,9 +49,9 @@ export default class Works extends Component {
                                }).bind(this);
                             }}
                             />
-                            <img
-                                src="../../../public/images/works_scienceme.jpg"
-                                className={styles.gridImage} />
+                        <img
+                            src="../../../public/images/works_scienceme.jpg"
+                            className={styles.gridImage}/>
                     </div>
                     <div
                         className={styles.gridTile}
@@ -62,7 +63,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.thetriggerguy.title}
@@ -79,9 +79,9 @@ export default class Works extends Component {
                                }).bind(this);
                             }}
                             />
-                            <img
-                                src="../../../public/images/works_triggerguy.jpg"
-                                className={styles.gridImage} />
+                        <img
+                            src="../../../public/images/works_triggerguy.jpg"
+                            className={styles.gridImage}/>
                     </div>
                 </div>
                 <div className={styles.gridLayer2}>
@@ -95,7 +95,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.ingenconcepts.title}
@@ -114,7 +113,7 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_ingenconcepts.jpg"
-                            className={styles.gridImageWide} />
+                            className={styles.gridImageWide}/>
                     </div>
                 </div>
                 <div className={styles.gridLayer3}>
@@ -128,7 +127,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.chargersignup.title}
@@ -147,7 +145,7 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_chargersignup.jpg"
-                            className={styles.gridImage} />
+                            className={styles.gridImage}/>
                     </div>
                     <div
                         className={styles.gridTile}
@@ -159,7 +157,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.tictactoe.title}
@@ -178,7 +175,7 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_tictactoe.jpg"
-                            className={styles.gridImage} />
+                            className={styles.gridImage}/>
                     </div>
                 </div>
                 <div className={styles.gridLayer4}>
@@ -192,7 +189,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.matchwars.title}
@@ -211,7 +207,7 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_matchwars.jpg"
-                            className={styles.gridImageWide} />
+                            className={styles.gridImageWide}/>
                     </div>
                 </div>
                 <div className={styles.gridLayer5}>
@@ -225,7 +221,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.twailerz.title}
@@ -244,7 +239,7 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_twailerz.jpg"
-                            className={styles.gridImage} />
+                            className={styles.gridImage}/>
                     </div>
                     <div
                         className={styles.gridTile}
@@ -256,7 +251,6 @@ export default class Works extends Component {
                             className={styles.gridTileButton}
                             style={localStyles.button}
                             backgroundColor={'#ffffff'}
-                            rippleStyle={localStyles.ripple}
                             labelColor={"#ffffff"}
                             labelStyle={localStyles.button}
                             label={this.state.title?this.state.title:worksInfo.marounrecords.title}
@@ -275,13 +269,17 @@ export default class Works extends Component {
                             />
                         <img
                             src="../../../public/images/works_marounrecords.jpg"
-                            className={styles.gridImage} />
+                            className={styles.gridImage}/>
                     </div>
                 </div>
             </div>
         );
     }
 
+    /**
+     * Check for div name on click
+     * @param image
+     */
     testClick = (image) => {
         console.log(image);
     }
@@ -294,13 +292,8 @@ const localStyles = {
         'fontSize': '1.5vh',
         'fontWeight': '300',
         'backgroundColor': 'transparent'
-    },
-    ripple: {
-        'backgroundColor': '#000000',
-        'color': '#000000'
     }
-
-}
+};
 
 const worksInfo = {
     scienceme: {

@@ -422,8 +422,6 @@ and (orientation : portrait) {
         height: auto;
         overflow-y: auto;
         overflow-x: hidden;
-        /*background: url('./sunsetlapse.png') no-repeat 50% 50%;*/
-        /*background-size: cover;*/
     }
 
     .gridLayer1,

@@ -34,13 +34,21 @@ app.use(function (req, res, next) {
     next();
 });
 
+
 app.get('/', function(request, response) {
     response.sendFile(__dirname + '/index.html');
     console.log('Hello from the server!');
 });
 
-// Send email with contact form information
+/**
+ * Send email with contact form information
+ */
 app.post('/sendForm', function (req, res) {
+
+    /**
+     * Contact form content to be sent
+     * @type {{from: {name: string, address: email}, sender: email, replyTo: email, to: email, subject: string, text: string}}
+     */
     var mailOptions = {
         from: {
             name: req.body.name,
@@ -53,6 +61,9 @@ app.post('/sendForm', function (req, res) {
         text: req.body.message
     };
 
+    /**
+     * Create authentication and route for mailer
+     */
     var transporter = nodeMailer.createTransport({
         host: 'smtp.mailgun.org',
         port: 465,
@@ -64,6 +75,9 @@ app.post('/sendForm', function (req, res) {
 
     });
 
+    /**
+     * Send mail content
+     */
     transporter.sendMail(mailOptions, function (error, info){
         if(error) {
             console.log(error);
@@ -95,6 +109,10 @@ if(process.env.NODE_ENV !== 'production') {
 
 }
 
+
+/**
+ * Create express server
+ */
 app.listen(PORT, function(error) {
     if (error) {
         console.error(error);

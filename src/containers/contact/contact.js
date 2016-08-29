@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import styles from './contact.css';
-import { sendForm } from '../../actions/index';
 import { reduxForm } from 'redux-form';
+/* CSS Styles for About */
+import styles from './contact.css';
+/* Redux Actions */
+import { sendForm } from '../../actions/index';
 
 export default class ContactForm extends Component {
     constructor (props) {
@@ -20,6 +22,10 @@ export default class ContactForm extends Component {
     componentWillReceiveProps = (props) => {
         console.log('Props: ', props);
         console.log('Info Sent: ', props.formInfo.result == 'yo');
+
+        /**
+         * Update input values from state
+         */
         this.setState({
             nameVal: this.props.values.name,
             emailVal: this.props.values.email,
@@ -30,7 +36,6 @@ export default class ContactForm extends Component {
     };
 
     render() {
-
         return (
             <div className={styles.contactContainer}>
                 {this.formDisplay()}
@@ -38,6 +43,11 @@ export default class ContactForm extends Component {
         );
     }
 
+    /**
+     * Name input
+     * @param name
+     * @returns input field
+     */
     name = (name) => {
         return (
             <div className={styles.inputDiv}>
@@ -50,6 +60,11 @@ export default class ContactForm extends Component {
 
     };
 
+    /**
+     * Email input
+     * @param email
+     * @returns email field
+     */
     email = (email) => {
         if(this.state.nameVal) {
             return (
@@ -67,6 +82,11 @@ export default class ContactForm extends Component {
         }
     };
 
+    /**
+     * Subject input
+     * @param subject
+     * @returns subject field
+     */
     subject = (subject) => {
         if(this.state.emailVal) {
             return (
@@ -84,6 +104,11 @@ export default class ContactForm extends Component {
         }
     };
 
+    /**
+     * Message input
+     * @param message
+     * @returns message field
+     */
     message = (message) => {
         if(this.state.subjectVal) {
             return (
@@ -101,6 +126,10 @@ export default class ContactForm extends Component {
         }
     };
 
+    /**
+     * Submit button
+     * @returns button div
+     */
     button = () => {
         if(this.state.messageVal) {
             return (
@@ -113,14 +142,22 @@ export default class ContactForm extends Component {
         }
     };
 
+    /**
+     * Submit form
+     * @param props
+     */
     onSubmit = (props) => {
         this.setState({reset: false});
         if (this.state.nameVal) {
             console.log(props);
             this.props.sendForm(props);
         }
-    }
+    };
 
+    /**
+     * Display form
+     * @returns form divs
+     */
     formDisplay = () => {
         const { fields: {name, email, subject, message}, handleSubmit, resetForm} = this.props;
         if (this.props.formInfo.result == 'yo' && !this.state.reset) {
@@ -136,7 +173,7 @@ export default class ContactForm extends Component {
             }, 3000);
             return (
                 <div className={styles.thankYou}>
-                    {this.props.thankYouImage}
+                    <img src="../../../public/images/contact_thankyou.png" />
                     <div></div>
                 </div>
             );
@@ -177,13 +214,13 @@ const validate = (values) => {
     }
 
     return errors;
-}
+};
 
 const mapStateToProps = (state) => {
     return {
         formInfo: state.sendFormInfo
     }
-}
+};
 
 export default reduxForm({ // <----- THIS IS THE IMPORTANT PART!
     form: 'contact',                           // a unique name for this form
