@@ -22,7 +22,7 @@ export default class Lander extends Component {
     }
 
     componentWillMount = () => {
-        console.log('ROUTE: ', this.props.navigator.route);
+        //console.log('ROUTE: ', this.props.navigator.route);
     };
 
     render() {
@@ -40,7 +40,7 @@ export default class Lander extends Component {
      * @returns route component
      */
     routeDisplay = () => {
-        console.log('ROUTE: ', this.props.navigator.route);
+        //console.log('ROUTE: ', this.props.navigator.route);
         switch (this.props.navigator.route) {
             case 'about':
                 return (

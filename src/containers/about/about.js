@@ -34,9 +34,7 @@ export default class About extends Component {
      * Set up title display
      */
     preLoadTitleDiv = () => {
-        console.log('ONE');
         this.titleDiv = () => {
-            console.log('THREE');
             return (
                 <div className={styles.titleDiv}>
                     <div className={styles.aboutTitle}>
@@ -54,7 +52,6 @@ export default class About extends Component {
     };
 
     preLoadCallBack = (bool) => {
-        console.log('TWO');
         this.setState({
             preLoadComplete: bool
         });

@@ -37,7 +37,7 @@ app.use(function (req, res, next) {
 
 app.get('/', function(request, response) {
     response.sendFile(__dirname + '/index.html');
-    console.log('Hello from the server!');
+    //console.log('Hello from the server!');
 });
 
 /**
@@ -80,10 +80,10 @@ app.post('/sendForm', function (req, res) {
      */
     transporter.sendMail(mailOptions, function (error, info){
         if(error) {
-            console.log(error);
+            //console.log(error);
             res.json('uh oh');
         } else {
-            console.log('Message successful: ' + info.response);
+            //console.log('Message successful: ' + info.response);
             res.json('yo');
         }
     })
@@ -115,8 +115,8 @@ if(process.env.NODE_ENV !== 'production') {
  */
 app.listen(PORT, function(error) {
     if (error) {
-        console.error(error);
+        //console.error(error);
     } else {
-        console.info("==> ?  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+        //console.info("==> ?  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     }
 });

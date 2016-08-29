@@ -21,12 +21,12 @@ export function navigationRoute (route) {
 // Local - http://localhost:8080/sendForm
 export function sendForm (formInfo) {
     //console.log('Form Info: ', formInfo);
-    const request = axios.post('https://trevorlinan.herokuapp.com/sendForm', formInfo)
+    const request = axios.post('http://www.trevorlinan.com/sendForm', formInfo)
         .then((result) => {
-            console.log('Result: ', result.data);
+            //console.log('Result: ', result.data);
             return result.data;
         }).catch((error) => {
-            console.log('Error: ', error);
+            //console.log('Error: ', error);
             if (error) {
                 return "uh oh";
             }

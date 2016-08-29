@@ -108,18 +108,18 @@ export default class Navigation extends Component {
     }
 
     handleToggle = () => {
-        console.log('HEY!: ', this.state.menuButtonType);
+        //console.log('HEY!: ', this.state.menuButtonType);
         this.setState({
             open: !this.state.open
         });
         this.adjustNavigationDrawerSize()
-    }
+    };
 
     adjustNavigationDrawerSize = () => {
         let node = ReactDOM.findDOMNode(this.refs["navWindow"]);
         if (node){
             let calculatedWidth = node.clientWidth;
-            console.log('Calculated Width: ', calculatedWidth);
+            //console.log('Calculated Width: ', calculatedWidth);
             if(calculatedWidth <= 1024) {
                 if(!this.state.open) {
                     this.setState({

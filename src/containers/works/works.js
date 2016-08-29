@@ -281,7 +281,7 @@ export default class Works extends Component {
      * @param image
      */
     testClick = (image) => {
-        console.log(image);
+        //console.log(image);
     }
 
 }

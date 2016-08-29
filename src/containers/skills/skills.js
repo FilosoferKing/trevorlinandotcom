@@ -39,15 +39,17 @@ export default class Skills extends Component {
      */
     listSkillSetTitles = () => {
         let skillSet = ['Front End', 'Back End', 'Dev Tools', 'Creative'];
+        let keyVal = 1;
         return _.map(skillSet, function(skillSet) {
+            //console.log('KeyVal: ', keyVal);
             return (
-                <div className={styles.circlePaperContainer}>
+                <div className={styles.circlePaperContainer} key={keyVal++} >
                     <div className={styles.pseudoPaperContainer}></div>
-                    <CirclePaper paperStyle={styles.paper1} backgroundColor={localStyles.paper.skillSetBackgroundColor} text={skillSet}/>
+                    <CirclePaper paperStyle={styles.paper1} backgroundColor={localStyles.paper.skillSetBackgroundColor} text={skillSet} />
                 </div>
             );
         })
-    }
+    };
 
     /**
      * Load skills divs
@@ -59,18 +61,20 @@ export default class Skills extends Component {
         let devToolsSkillSet = ['Chrome DevTools', 'Git', 'Github', 'PhpStorm', 'MAMP',  null,  null];
         let creativeSkillSet = ['Photoshop', null, null, null, null, null, null];
         let skillSetsArray = [frontEndSkillSet, backEndSkillSet, devToolsSkillSet, creativeSkillSet];
+        let keyVal = 1;
 
         let skillSetsMap = _.map(skillSetsArray, function (skillSet){
              return _.map(skillSet, function(skill) {
+                 //console.log('KeyVal: ', keyVal);
                  if (skill) {
                      return (
-                         <div className={styles.circlePaperContainer} >
-                             <CirclePaper paperStyle={styles.paper1} backgroundColor={localStyles.paper.skillsBackgroundColor} text={skill}/>
+                         <div className={styles.circlePaperContainer} key={keyVal++} >
+                             <CirclePaper paperStyle={styles.paper1} backgroundColor={localStyles.paper.skillsBackgroundColor} text={skill} />
                          </div>
                      );
                  } else {
                      return (
-                         <div className={styles.circlePaperContainer} >
+                         <div className={styles.circlePaperContainer} key={keyVal++} >
 
                          </div>
                      );
@@ -80,7 +84,7 @@ export default class Skills extends Component {
 
         return _.map(skillSetsMap, function (skillSet) {
             return (
-                <div className={styles.paperDivsHorizontal}>
+                <div className={styles.paperDivsHorizontal} key={keyVal++} >
                     {skillSet}
                 </div>
             );

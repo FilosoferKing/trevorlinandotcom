@@ -23,8 +23,8 @@ export default class ContactForm extends Component {
     }
 
     componentWillReceiveProps = (props) => {
-        console.log('Props: ', props);
-        console.log('Info Sent: ', props.formInfo.result == 'yo');
+        //console.log('Props: ', props);
+        //console.log('Info Sent: ', props.formInfo.result == 'yo');
 
         /**
          * Update input values from state
@@ -35,7 +35,7 @@ export default class ContactForm extends Component {
             subjectVal: this.props.values.subject,
             messageVal: this.props.values.message
         });
-        console.log(this.state);
+        //console.log(this.state);
     };
 
     render() {
@@ -153,7 +153,7 @@ export default class ContactForm extends Component {
     onSubmit = (props) => {
         this.setState({reset: false});
         if (this.state.nameVal) {
-            console.log(props);
+            //console.log(props);
             this.props.sendForm(props);
         }
     };

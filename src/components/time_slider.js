@@ -40,7 +40,7 @@ class TimeSlider extends Component {
     render() {
         return (
             <div className={this.props.sliderStyle}>
-                {console.log('LIGHTING INSIDE SLIDER: ', this.props.lightSlider.lighting)}
+                {/*console.log('LIGHTING INSIDE SLIDER: ', this.props.lightSlider.lighting)*/}
                 <Snackbar
                     className={this.props.snackbarStyle}
                     style={localStyles.snackbar}
@@ -79,10 +79,10 @@ class TimeSlider extends Component {
      */
     currentTime = () => {
         let hour = moment().format("H");
-        console.log('Current Time: ', hour + ' What the heck!');
+        //console.log('Current Time: ', hour + ' What the heck!');
 
         let currentDate = Number(hour);
-        console.log('Current Date: ', currentDate);
+        //console.log('Current Date: ', currentDate);
 
         this.props.slideLight(100);
 

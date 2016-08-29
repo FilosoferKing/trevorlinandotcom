@@ -33,7 +33,7 @@ export default class CirclePaper extends Component {
      * @returns skill name
      */
     text = () => {
-        console.log(this.props.paperStyle);
+        //console.log(this.props.paperStyle);
         return (
             <p>{this.props.text}</p>
         );
@@ -46,7 +46,7 @@ export default class CirclePaper extends Component {
         let node = ReactDOM.findDOMNode(this.refs["circle"]);
         if (node){
             let calculatedHeight = node.clientHeight;
-            console.log('Calculated Height: ', calculatedHeight);
+            //console.log('Calculated Height: ', calculatedHeight);
 
             this.setState({
                 style: {
