@@ -1,7 +1,7 @@
 .contactContainer {
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-flow: column wrap;
     justify-content: center;
     position: absolute;
     top: 0;
@@ -15,7 +15,7 @@
 
 .contactForm {
     position: relative;
-    flex: 1;
+    flex: 10;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -145,6 +145,38 @@
     -webkit-filter: invert(100%);
 }
 
+.contactInfoContainer {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    background-color: rgba(65, 203, 163, .55);
+}
+
+.contactInfoContainer div:nth-child(1) {
+    flex: 10;
+    text-align: right;
+}
+
+.contactInfoContainer div:nth-child(2) {
+    flex: 5;
+    text-align: center;
+}
+
+.contactInfoContainer div:nth-child(3) {
+    flex: 10;
+    text-align: left;
+}
+
+.contactInfoContainer div a {
+    margin-top: 50%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
 @media only screen
 and (min-device-width : 100px)
 and (max-device-width : 790px)
@@ -215,5 +247,36 @@ and (orientation : portrait) {
     .contactContainer .thankYou img {
         width: 80vw;
         height: auto;
+    }
+
+    .contactInfoContainer {
+        flex: 2;
+        flex-flow: column wrap;
+        font-size: 5vw;
+        background-color: rgba(65, 203, 163, .55);
+    }
+
+    .contactInfoContainer div:nth-child(1) {
+        flex: 1;
+        text-align: center;
+        line-height: 75px;
+    }
+
+    .contactInfoContainer div:nth-child(2) {
+        flex: 1;
+        text-align: center;
+        line-height: 75px;
+    }
+
+    .contactInfoContainer div:nth-child(3) {
+        flex: 1;
+        text-align: center;
+        line-height: 75px;
+    }
+
+    .contactInfoContainer div a {
+        margin-top: 50%;
+        color: #ffffff;
+        text-decoration: none;
     }
 }

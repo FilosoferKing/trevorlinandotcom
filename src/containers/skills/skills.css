@@ -523,7 +523,7 @@ and (orientation : portrait) {
         flex: 3;
         flex-direction: row;
         z-index: 0;
-        margin-top: 15vh;
+        margin-top: 5vh;
         margin-bottom: 50px;
     }
 
@@ -553,7 +553,7 @@ and (orientation : portrait) {
 
     .skillsDivs .paper1 p {
         font-size: 2vh;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .paperDivsHorizontal {
@@ -571,7 +571,15 @@ and (orientation : portrait) {
     }
 
     .mobileTitle img {
-        display: none;
+        display: block;
+        margin-top: 15vh;
+        width: 80vw;
+        height: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
     }
 
     .paperDivsHorizontal img {

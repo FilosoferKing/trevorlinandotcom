@@ -17,7 +17,9 @@ export default class Skills extends Component {
     render() {
         return (
             <div className={styles.skillsContainer}>
-                <div className={styles.mobileTitle}>{this.props.titleImage}</div>
+                <div className={styles.mobileTitle}>
+                    <img src="../../../public/images/skills_skillstitle.png" />
+                </div>
                 <div className={styles.paperDivs}>
                     {this.listSkillSetTitles()}
                 </div>

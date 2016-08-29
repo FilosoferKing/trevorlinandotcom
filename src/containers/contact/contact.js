@@ -5,6 +5,9 @@ import styles from './contact.css';
 /* Redux Actions */
 import { sendForm } from '../../actions/index';
 
+import IconButton from 'material-ui/IconButton';
+import FileDownload from 'material-ui/svg-icons/file/file-download';
+
 export default class ContactForm extends Component {
     constructor (props) {
         super(props);
@@ -39,6 +42,7 @@ export default class ContactForm extends Component {
         return (
             <div className={styles.contactContainer}>
                 {this.formDisplay()}
+                {this.contactInfo()}
             </div>
         );
     }
@@ -190,6 +194,24 @@ export default class ContactForm extends Component {
                 );
             }
         }
+    };
+
+    /**
+     * Display contact information
+     * @returns contact info div
+     */
+    contactInfo = () => {
+        return (
+            <div className={styles.contactInfoContainer}>
+                <div>trevorlinan@gmail.com</div>
+                <div>714.926.2086</div>
+                <div>
+                    <a href="http://www.trevorlinan.com/resume.pdf" target="_blank">
+                        Resume <FileDownload />
+                    </a>
+                </div>
+            </div>
+        );
     }
 
 }
