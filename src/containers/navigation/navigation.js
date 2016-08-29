@@ -158,9 +158,9 @@ const localStyles = {
     },
     mobileMenuItem: {
         'margin' : '10vh auto',
-        'fontSize': '10vw',
+        'fontSize': '7vw',
         'color': '#ffffff',
-        'fontWeight': '400',
+        'fontWeight': '300',
         'textAlign': 'center'
     },
     buttonOpen: {
