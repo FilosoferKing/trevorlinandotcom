@@ -11,7 +11,7 @@ import Contact from '../contact/contact';
 import VideoBackground from '../../components/video_bg'; /* <VideoBackground styling={styles.video} lightingSlider={this.props.lightSlider.lighting} /> */ // NOT IN USE
 import TimeSlider from '../../components/time_slider'; /* <TimeSlider sliderStyle={styles.slider} snackbarStyle={styles.snackbar} /> */ // NOT IN USE
 
-export default class Lander extends Component {
+class Lander extends Component {
     constructor(props) {
         super(props);
 
