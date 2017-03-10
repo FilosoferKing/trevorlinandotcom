@@ -8,7 +8,7 @@ import { sendForm } from '../../actions/index';
 import IconButton from 'material-ui/IconButton';
 import FileDownload from 'material-ui/svg-icons/file/file-download';
 
-export default class ContactForm extends Component {
+class ContactForm extends Component {
     constructor (props) {
         super(props);
 
