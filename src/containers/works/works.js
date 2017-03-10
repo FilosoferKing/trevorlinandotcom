@@ -324,7 +324,7 @@ const worksInfo = {
     matchwars: {
         title: 'Match Wars',
         desc: 'Match Wars is a Star Wars themed card matching game to test your memory.',
-        link: 'http://www.ingenconcepts.com/matchwars'
+        link: 'http://trevorlinan.com/matchwars'
     },
     twailerz: {
         title: 'Twailerz',
